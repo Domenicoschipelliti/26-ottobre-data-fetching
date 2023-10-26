@@ -19,7 +19,7 @@ const ComponenteForm=()=>{
          <option value="5">5</option>
     </Form.Select>
       <div className="d-flex justify-content-center">
-        <Button>Submit</Button>
+        <Button>Aggiungi Commento</Button>
       </div>
        
       </Form.Group>
