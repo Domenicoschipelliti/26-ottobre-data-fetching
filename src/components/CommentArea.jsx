@@ -1,5 +1,6 @@
 import { Component } from "react";
-import { Col, Container, ListGroup, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import CommentList from "./CommentList";
 
 class CommentArea extends Component {
   state = {
@@ -46,14 +47,9 @@ class CommentArea extends Component {
       <Container>
         <Row>
           <Col xs={12} md={4}>
-            {this.state.commenti.map((com) => {
-              return (
-                <ListGroup key={com.elementId}>
-                  <ListGroup.Item>{com.comment}</ListGroup.Item>
-                  <ListGroup.Item>{com.rate}</ListGroup.Item>
-                </ListGroup>
-              );
-            })}
+            <div>
+              <CommentList comenti={this.state.commenti} />
+            </div>
           </Col>
         </Row>
       </Container>
